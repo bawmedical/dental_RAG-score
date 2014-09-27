@@ -15,8 +15,55 @@
     <![endif]-->
   </head>
   <body>
-    <h1>Hello, dental world!</h1>
-
+    <h1>Dental RAG Score</h1>
+    <div id="caries">
+        <h2>Caries (Tooth Decay)</h2>
+        <form role="form" id="caries_clinical">
+            <h3>Clinical Factors</h3>
+        </form>
+        <form role="form" id="caries_patient">
+            <h3>Patient Factors</h3>
+        </form>
+        <button type="submit" class="btn btn-default" id="caries_submit">
+            Submit
+        </button>
+    </div>
+    <div id="surface_loss">
+        <h2>Tooth Surface Loss</h2>
+        <form role="form" id="surface_loss_clinical">
+            <h3>Clinical Factors</h3>
+        </form>
+        <form role="form" id="surface_loss_patient">
+            <h3>Patient Factors</h3>
+        </form>
+        <button type="submit" class="btn btn-default" id="surface_loss_submit">
+            Submit
+        </button>
+    </div>
+    <div id="periodontal">
+        <h2>Periodontal Disease (Gum Disease)</h2>
+        <form role="form" id="periodontal_clinical">
+            <h3>Clinical Factors</h3>
+        </form>
+        <form role="form" id="periodontal_patient">
+            <h3>Patient Factors</h3>
+        </form>
+        <button type="submit" class="btn btn-default" id="periodontal_submit">
+            Submit
+        </button>
+    </div>
+    <div id="cancer">
+        <h2>Soft Tissue (Mouth Cancer)</h2>
+        <form role="form" id="cancer_clinical">
+            <h3>Clinical Factors</h3>
+        </form>
+        <form role="form" id="cancer_patient">
+            <h3>Patient Factors</h3>
+        </form>
+        <button type="submit" class="btn btn-default" id="cancer_submit">
+            Submit
+        </button>
+    </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>
