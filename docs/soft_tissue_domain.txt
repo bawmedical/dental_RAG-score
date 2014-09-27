@@ -1,0 +1,54 @@
+
+/****************************************************************
+* Caries Domain - Clincal Factors
+*****************************************************************/
+
+
+Name: Teeth with Carious lesions
+Desc: 
+Color: Red
+Var Name: cf_cd_lesions
+
+Name: No teeth with carious lesions
+Desc: 
+Color: Green
+Var Name: cf_cd_nolesions
+
+/****************************************************************
+* Caries Domain - Paitent Factors
+*****************************************************************/
+
+Name: Age
+Desc: 
+Color: Green
+Var Name: pf_cd_age
+
+Name: Symptoms
+Desc: 
+Color: Red
+Var Name: pf_cd_symptoms
+
+Name: Diet
+Desc: fizzy/acidic drinks and food
+Color: Amber 
+Var Name: pf_cd_diet
+
+Name: Excess Sugar
+Desc: 
+Color: Amber
+Var Name: pf_cd_excesssugar
+
+Name: Frequent Sugar
+Desc: 
+Color: Amber
+Var Name: pf_cd_freqsugar
+
+Name: Unsatisfactory plaque control
+Desc: 
+Color: Amber
+Var Name: pf_cd_plaquecontrol
+
+Name: Sibling experience
+Desc: 
+Color: Amber
+Var Name: pf_cd_sibling
