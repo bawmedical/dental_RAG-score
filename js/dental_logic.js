@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
 	function cariesRAG(){
 		var caries_red = ["#caries_clinical_lesions",
