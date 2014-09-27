@@ -94,14 +94,19 @@ $(document).ready(function() {
 	}
 
     function setResult(domElement, message) {
+        var label = 'label';
         var classname = 'bg-success';
         if(message === 'red') {
             classname = 'bg-danger';
+            label += ' label-danger';
         } else if (message === 'amber') {
             classname = 'bg-warning';
+            label += ' label-warning';
+        } else {
+            label += ' label-success';
         }
         $(domElement).attr('class', classname)
-        $(domElement + '_result').text(message);
+        $(domElement + '_result').text(message).attr('class', label);
     }
 
 	$('#caries_submit').click(function(e){
