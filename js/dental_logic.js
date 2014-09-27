@@ -93,16 +93,27 @@ $(document).ready(function() {
         return 'green';
 	}
 
+    function setResult(domElement, message) {
+        var classname = 'bg-success';
+        if(message === 'red') {
+            classname = 'bg-danger';
+        } else if (message === 'amber') {
+            classname = 'bg-warning';
+        }
+        $(domElement).attr('class', classname)
+        $(domElement + '_result').text(message);
+    }
+
 	$('#caries_submit').click(function(e){
-        $('#caries_result').text(cariesRAG());
+        setResult('#caries', cariesRAG());
     });
 	$('#surface_loss_submit').click(function(e){
-        $('#surface_loss_result').text(toothSurfaceLossRAG());
+        setResult('#surface_loss', toothSurfaceLossRAG());
     });
 	$('#periodontal_submit').click(function(e){
-        $('#periodontal_result').text(periodontalRAG());
+        setResult('#periodontal', periodontalRAG());
     });
 	$('#cancer_submit').click(function(e){
-        $('#cancer_result').text(softTissueRAG());
+        setResult('#cancer', softTissueRAG());
     });
 });
