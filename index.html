@@ -20,9 +20,44 @@
         <h2>Caries (Tooth Decay)</h2>
         <form role="form" id="caries_clinical">
             <h3>Clinical Factors</h3>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="caries_clinical_lesions">
+                    Teeth with carious lesions
+                </label>
+            </div>
         </form>
         <form role="form" id="caries_patient">
             <h3>Patient Factors</h3>
+            <div class="form-group">
+                <label for="caries_age">Patient age</label>
+                <input type="number" class="form-control"
+                    id="caries_patiemt_age" min="0" max="140"/>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="caries_patient_symptoms">
+                    Symptoms
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="caries_patient_diet">
+                    Diet - Excess sugar / frequent sugar
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="caries_patient_plaque_control">
+                    Unsatisfactory Plaque control
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="caries_patient_sibling">
+                    Sibling experience
+                </label>
+            </div>
         </form>
         <button type="submit" class="btn btn-default" id="caries_submit">
             Submit
@@ -32,6 +67,30 @@
         <h2>Tooth Surface Loss</h2>
         <form role="form" id="surface_loss_clinical">
             <h3>Clinical Factors</h3>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="surface_loss_excessive">
+                    Excessive
+                </label>
+                <span class="help-block">Tooth surface loss causing symptoms
+                or wear of dentine more than 1/3 of crown height.</span>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="surface_loss_moderate">
+                    Moderate
+                </label>
+                <span class="help-block">Wear of dentine up to 1/3 of the
+                crown height without symptoms.</span>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="surface_loss_commensurate">
+                    Commensurate
+                </label>
+                <span class="help-block">Tooth surface loss commensurate with
+                age.</span>
+            </div>
         </form>
         <form role="form" id="surface_loss_patient">
             <h3>Patient Factors</h3>
