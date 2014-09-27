@@ -1,4 +1,4 @@
 dental_RAG-score
 ================
 
-web-based tool for easy calculation of dental RAG scores
+Web-based tool for easy calculation of dental RAG scores.
