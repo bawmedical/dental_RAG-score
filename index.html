@@ -15,115 +15,269 @@
     <![endif]-->
   </head>
   <body>
-    <h1>Dental RAG Score</h1>
-    <div id="caries">
-        <h2>Caries (Tooth Decay)</h2>
-        <form role="form" id="caries_clinical">
-            <h3>Clinical Factors</h3>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" id="caries_clinical_lesions">
-                    Teeth with carious lesions
-                </label>
-            </div>
-        </form>
-        <form role="form" id="caries_patient">
-            <h3>Patient Factors</h3>
-            <div class="form-group">
-                <label for="caries_age">Patient age</label>
-                <input type="number" class="form-control"
-                    id="caries_patiemt_age" min="0" max="140"/>
-            </div>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" id="caries_patient_symptoms">
-                    Symptoms
-                </label>
-            </div>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" id="caries_patient_diet">
-                    Diet - Excess sugar / frequent sugar
-                </label>
-            </div>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" id="caries_patient_plaque_control">
-                    Unsatisfactory Plaque control
-                </label>
-            </div>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" id="caries_patient_sibling">
-                    Sibling experience
-                </label>
-            </div>
-        </form>
-        <button type="submit" class="btn btn-default" id="caries_submit">
-            Submit
-        </button>
-    </div>
-    <div id="surface_loss">
-        <h2>Tooth Surface Loss</h2>
-        <form role="form" id="surface_loss_clinical">
-            <h3>Clinical Factors</h3>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" id="surface_loss_excessive">
-                    Excessive
-                </label>
-                <span class="help-block">Tooth surface loss causing symptoms
-                or wear of dentine more than 1/3 of crown height.</span>
-            </div>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" id="surface_loss_moderate">
-                    Moderate
-                </label>
-                <span class="help-block">Wear of dentine up to 1/3 of the
-                crown height without symptoms.</span>
-            </div>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" id="surface_loss_commensurate">
-                    Commensurate
-                </label>
-                <span class="help-block">Tooth surface loss commensurate with
-                age.</span>
-            </div>
-        </form>
-        <form role="form" id="surface_loss_patient">
-            <h3>Patient Factors</h3>
-        </form>
-        <button type="submit" class="btn btn-default" id="surface_loss_submit">
-            Submit
-        </button>
-    </div>
-    <div id="periodontal">
-        <h2>Periodontal Disease (Gum Disease)</h2>
-        <form role="form" id="periodontal_clinical">
-            <h3>Clinical Factors</h3>
-        </form>
-        <form role="form" id="periodontal_patient">
-            <h3>Patient Factors</h3>
-        </form>
-        <button type="submit" class="btn btn-default" id="periodontal_submit">
-            Submit
-        </button>
-    </div>
-    <div id="cancer">
-        <h2>Soft Tissue (Mouth Cancer)</h2>
-        <form role="form" id="cancer_clinical">
-            <h3>Clinical Factors</h3>
-        </form>
-        <form role="form" id="cancer_patient">
-            <h3>Patient Factors</h3>
-        </form>
-        <button type="submit" class="btn btn-default" id="cancer_submit">
-            Submit
-        </button>
+    <div class="container">
+        <h1>Dental RAG Score</h1>
+        <div class="form-group">
+            <label for="patient_name">Patient Name</label>
+            <input type="text" class="form-control" id="patient_name"
+                placeholder="Firstname Lastname">
+        </div>
+        <div class="form-group">
+            <label for="patient_nhs_number">NHS Number</label>
+            <input type="text" class="form-control" id="patient_nhs_number"/>
+        </div>
+        <div class="form-group">
+            <label for="caries_age">Patient age</label>
+            <input type="number" class="form-control"
+                id="surface_loss_patiemt_age" min="0" max="140"
+                style="width: 10%;"/>
+        </div>
+        <hr/>
+        <div id="caries">
+            <h2>Caries (Tooth Decay)</h2>
+            <form role="form" id="caries_clinical">
+                <h3>Clinical Factors</h3>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="caries_clinical_lesions">
+                        Teeth with carious lesions
+                    </label>
+                </div>
+            </form>
+            <form role="form" id="caries_patient">
+                <h3>Patient Factors</h3>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="caries_patient_symptoms">
+                        Symptoms
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="caries_patient_diet">
+                        Diet - Excess sugar / frequent sugar
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="caries_patient_plaque_control">
+                        Unsatisfactory Plaque control
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="caries_patient_sibling">
+                        Sibling experience
+                    </label>
+                </div>
+            </form>
+            <button type="submit" class="btn btn-default" id="caries_submit">
+                Submit
+            </button>
+        </div>
+        <hr/>
+        <div id="surface_loss">
+            <h2>Tooth Surface Loss</h2>
+            <form role="form" id="surface_loss_clinical">
+                <h3>Clinical Factors</h3>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="surface_loss_clinical"
+                            id="surface_loss_excessive" value="excessive">
+                        Excessive
+                    </label>
+                    <span class="help-block">Tooth surface loss causing
+                    symptoms or wear of dentine more than 1/3 of crown
+                    height.</span>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="surface_loss_clinical"
+                            id="surface_loss_moderate" value="moderate">
+                        Moderate
+                    </label>
+                    <span class="help-block">Wear of dentine up to 1/3 of the
+                    crown height without symptoms.</span>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="surface_loss_clinical"
+                            id="surface_loss_commensurate" value="appropriate">
+                        Appropriate
+                    </label>
+                    <span class="help-block">Tooth surface loss commensurate
+                    with age.</span>
+                </div>
+            </form>
+            <form role="form" id="surface_loss_patient">
+                <h3>Patient Factors</h3>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"
+                            id="surface_loss_patient_symptoms">Symptoms
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"
+                            id="surface_loss_diet">Diet - fizzy / acidic
+                            drinks or food
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"
+                            id="surface_loss_brushing">Unsatisfactory tooth
+                            brushing technique
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"
+                            id="surface_loss_para">Para function
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"
+                            id="surface_loss_reflux">Reflux / medical
+                    </label>
+                </div>
+            </form>
+            <button type="submit" class="btn btn-default"
+                id="surface_loss_submit">
+                Submit
+            </button>
+        </div>
+        <hr/>
+        <div id="periodontal">
+            <h2>Periodontal Disease (Gum Disease)</h2>
+            <form role="form" id="periodontal_clinical">
+                <h3>Clinical Factors</h3>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="periodontal_clinical"
+                            id="periodontal_severe" value="severe">
+                        Severe
+                    </label>
+                    <span class="help-block">One code 4 for BPE and bleeding
+                    <strong>or</strong> more than two code 3s for BPE and
+                    bleeding.</span>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="periodontal_clinical"
+                            id="periodontal_moderate" value="moderate">
+                        Moderate
+                    </label>
+                    <span class="help-block">One or more code 2s for BPE and
+                    bleeding <strong>or</strong> two or less code 3s for
+                    BPE and bleeding.</span>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="periodontal_clinical"
+                            id="periodontal_healthy" value="healthy">
+                        Healthy
+                    </label>
+                    <span class="help-block">BPE all less than code 2 except
+                    lower anterior.</span>
+                </div>
+            </form>
+            <form role="form" id="periodontal_patient">
+                <h3>Patient Factors</h3>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"
+                            id="periodontal_patient_symptoms">Symptoms
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"
+                            id="periodontal_patient_plaque_control">Unsatisfactory plaque control
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"
+                            id="periodontal_patient_smoking">Smoking
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"
+                            id="periodontal_patient_poor_diabetes">Poorly
+                            controlled Diabetes
+                    </label>
+                </div>
+            </form>
+            <button type="submit" class="btn btn-default"
+                id="periodontal_submit">Submit</button>
+        </div>
+        <hr/>
+        <div id="cancer">
+            <h2>Soft Tissue (Mouth Cancer)</h2>
+            <form role="form" id="soft_tissue_clinical">
+                <h3>Clinical Factors</h3>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="soft_tissue_clinical"
+                            id="soft_tissue_referral" value="referral">
+                        Lesion requiring referral.
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="soft_tissue_clinical"
+                            id="soft_tissue_lesion" value="lesion">
+                        Lesion.
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="soft_tissue_clinical"
+                            id="soft_tissue_healthy" value="healthy">
+                        No lesions.
+                    </label>
+                </div>
+            </form>
+            <form role="form" id="soft_tissue_patient">
+                <h3>Patient Factors</h3>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"
+                            id="soft_tissue_patient_symptoms">Symptoms
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"
+                            id="soft_tissue_patient_site">Site of lesion -
+                            floor of mouth / tongue
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"
+                            id="soft_tissue_patient_tobacco_use">Tobacco use
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"
+                            id="soft_tissue_patient_alchohol">Alcholol intake
+                            above safe limit
+                    </label>
+                </div>
+            </form>
+            <button type="submit" class="btn btn-default" id="cancer_submit">
+                Submit
+            </button>
+        </div>
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/dental_logic.js"></script>
   </body>
 </html>
