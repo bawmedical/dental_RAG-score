@@ -42,12 +42,16 @@
         <h2>Caries (Tooth Decay)</h2>
           <form role="form" id="caries_clinical" class="col-md-5">
               <h3>Clinical Factors</h3>
-              <div class="checkbox">
-                  <label>
-                      <input type="checkbox" id="caries_clinical_lesions">
-                      Teeth with carious lesions
-                  </label>
-              </div>
+                <div class="radio">
+                <label>
+                    <input type="radio" name="caries_clinical_lesions" id="caries_clinical_lesions" value="with_lesions"> Teeth with carious lesions
+                </label>
+                </div>
+                <div class="radio">
+                <label>
+                    <input type="radio" name="caries_clinical_lesions" id="caries_no_lesions" value="no_lesions"> No teeth with carious lessions
+                </label>
+                </div>
           </form>
           <form role="form" id="caries_patient" class="col-md-5">
               <h3>Patient Factors</h3>

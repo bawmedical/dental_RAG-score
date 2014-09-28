@@ -120,6 +120,10 @@ $(document).ready(function() {
         setResult('#caries', cariesRAG());
     });
 
+    $('#caries_no_lesions').click(function(e){
+        setResult('#caries', cariesRAG());
+    });
+
     $('#caries_patient_symptoms').click(function(e){
         setResult('#caries', cariesRAG());
     });
