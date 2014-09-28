@@ -105,8 +105,11 @@ $(document).ready(function() {
         } else {
             label += ' label-success';
         }
-        $(domElement).attr('class', classname)
+//        $(domElement).append('class', classname);
+        console.log(domElement);
         $(domElement + '_result').text(message).attr('class', label);
+//        $(domElement).attr('class', classname)
+//        $(domElement + '_result').text(message).attr('class', label);
     }
 
 	$('#caries_submit').click(function(e){
